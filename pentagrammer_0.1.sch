@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.5.0">
+<eagle version="6.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -12657,9 +12657,9 @@ from PCB Edge</text>
 <pad name="6" x="2.54" y="1.27" drill="0.9144" shape="octagon"/>
 <text x="-7.62" y="5.08" size="1.778" layer="25" ratio="10">&gt;NAME</text>
 <text x="0.635" y="5.08" size="1.778" layer="27" ratio="10">&gt;VALUE</text>
-<text x="-5.08" y="-1.905" size="1.27" layer="21" ratio="10">1</text>
-<text x="-5.08" y="0.635" size="1.27" layer="21" ratio="10">2</text>
-<text x="-0.381" y="-4.064" size="1.27" layer="21" ratio="10">6</text>
+<text x="-5.08" y="-1.905" size="1.27" layer="21" font="vector" ratio="10">1</text>
+<text x="-5.08" y="0.635" size="1.27" layer="21" font="vector" ratio="10">2</text>
+<text x="0" y="-4.064" size="1.27" layer="21" font="vector" ratio="10" align="bottom-center">ISP</text>
 <rectangle x1="-0.254" y1="1.016" x2="0.254" y2="1.524" layer="51"/>
 <rectangle x1="-2.794" y1="1.016" x2="-2.286" y2="1.524" layer="51"/>
 <rectangle x1="2.286" y1="1.016" x2="2.794" y2="1.524" layer="51"/>
@@ -15258,13 +15258,13 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 </classes>
 <parts>
 <part name="IC1" library="atmel" deviceset="AT90S2313" device="P"/>
-<part name="C1" library="rcl" deviceset="CPOL-EU" device="E1.8-4"/>
+<part name="C1" library="rcl" deviceset="CPOL-EU" device="E1.8-4" value="1u"/>
 <part name="USB1" library="bigalexeasysolder" deviceset="USB-A" device="USB-A-ULTRAFLAT"/>
 <part name="PWR" library="adafruit" deviceset="LED" device="3MM"/>
 <part name="PRG" library="adafruit" deviceset="LED" device="3MM"/>
-<part name="R1" library="rcl" deviceset="R-EU_" device="0204/7"/>
+<part name="R1" library="rcl" deviceset="R-EU_" device="0204/7" value="1K"/>
 <part name="CON1" library="bigalexeasysolder" deviceset="AVR-ISP-6" device=""/>
-<part name="U$1" library="adafruit" deviceset="CERMOSCILL" device="-THM"/>
+<part name="Q1" library="adafruit" deviceset="CERMOSCILL" device="-THM"/>
 <part name="GND1" library="SparkFun" deviceset="GND" device=""/>
 <part name="GND2" library="SparkFun" deviceset="GND" device=""/>
 <part name="P+1" library="SparkFun" deviceset="VCC" device=""/>
@@ -15272,18 +15272,18 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <part name="GND3" library="SparkFun" deviceset="GND" device=""/>
 <part name="D1" library="diode" deviceset="ZENER-DIODE" device="ZD-5"/>
 <part name="D2" library="diode" deviceset="ZENER-DIODE" device="ZD-5"/>
-<part name="R2" library="rcl" deviceset="R-EU_" device="0204/7"/>
-<part name="R3" library="rcl" deviceset="R-EU_" device="0204/7"/>
-<part name="R4" library="rcl" deviceset="R-EU_" device="0204/7"/>
-<part name="R5" library="rcl" deviceset="R-EU_" device="0204/7"/>
-<part name="R6" library="rcl" deviceset="R-EU_" device="0204/7"/>
-<part name="R7" library="rcl" deviceset="R-EU_" device="0204/7"/>
-<part name="R8" library="rcl" deviceset="R-EU_" device="0204/7"/>
+<part name="R2" library="rcl" deviceset="R-EU_" device="0204/7" value="1K"/>
+<part name="R3" library="rcl" deviceset="R-EU_" device="0204/7" value="1K"/>
+<part name="R4" library="rcl" deviceset="R-EU_" device="0204/7" value="1K"/>
+<part name="R5" library="rcl" deviceset="R-EU_" device="0204/7" value="2K2"/>
+<part name="R6" library="rcl" deviceset="R-EU_" device="0204/7" value="68R"/>
+<part name="R7" library="rcl" deviceset="R-EU_" device="0204/7" value="68R"/>
+<part name="R8" library="rcl" deviceset="R-EU_" device="0204/7" value="10K"/>
 <part name="GND4" library="SparkFun" deviceset="GND" device=""/>
 <part name="GND5" library="SparkFun" deviceset="GND" device=""/>
 <part name="P+2" library="SparkFun" deviceset="VCC" device=""/>
 <part name="P+3" library="SparkFun" deviceset="VCC" device=""/>
-<part name="C2" library="rcl" deviceset="C-EU" device="025-024X044"/>
+<part name="C2" library="rcl" deviceset="C-EU" device="025-024X044" value="100n"/>
 <part name="GND7" library="SparkFun" deviceset="GND" device=""/>
 <part name="SJ1" library="SparkFun" deviceset="SOLDERJUMPER" device="NO"/>
 </parts>
@@ -15296,10 +15296,10 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <instance part="C1" gate="G$1" x="104.14" y="71.12"/>
 <instance part="USB1" gate="G$1" x="124.46" y="38.1" rot="R180"/>
 <instance part="PWR" gate="G$1" x="99.06" y="43.18" rot="R90"/>
-<instance part="PRG" gate="G$1" x="99.06" y="50.8" rot="R90"/>
-<instance part="R1" gate="G$1" x="88.9" y="48.26"/>
+<instance part="PRG" gate="G$1" x="86.36" y="50.8" rot="R90"/>
+<instance part="R1" gate="G$1" x="101.6" y="50.8"/>
 <instance part="CON1" gate="1" x="129.54" y="68.58"/>
-<instance part="U$1" gate="G$1" x="22.86" y="50.8"/>
+<instance part="Q1" gate="G$1" x="22.86" y="50.8"/>
 <instance part="GND1" gate="1" x="106.68" y="40.64"/>
 <instance part="GND2" gate="1" x="22.86" y="45.72"/>
 <instance part="P+1" gate="1" x="104.14" y="78.74"/>
@@ -15307,20 +15307,29 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <instance part="GND3" gate="1" x="104.14" y="60.96"/>
 <instance part="D1" gate="G$1" x="96.52" y="27.94" rot="R90"/>
 <instance part="D2" gate="G$1" x="101.6" y="27.94" rot="R90"/>
-<instance part="R2" gate="G$1" x="88.9" y="43.18"/>
-<instance part="R3" gate="G$1" x="88.9" y="68.58"/>
-<instance part="R4" gate="G$1" x="88.9" y="63.5"/>
+<instance part="R2" gate="G$1" x="88.9" y="43.18" smashed="yes">
+<attribute name="NAME" x="82.55" y="43.1546" size="1.778" layer="95"/>
+<attribute name="VALUE" x="91.948" y="43.18" size="1.778" layer="96"/>
+</instance>
+<instance part="R3" gate="G$1" x="88.9" y="68.58" smashed="yes">
+<attribute name="NAME" x="85.09" y="69.8246" size="1.778" layer="95"/>
+<attribute name="VALUE" x="89.154" y="69.85" size="1.778" layer="96"/>
+</instance>
+<instance part="R4" gate="G$1" x="88.9" y="63.5" smashed="yes">
+<attribute name="NAME" x="84.328" y="64.2366" size="1.778" layer="95"/>
+<attribute name="VALUE" x="89.916" y="64.262" size="1.778" layer="96"/>
+</instance>
 <instance part="R5" gate="G$1" x="88.9" y="40.64" smashed="yes">
 <attribute name="NAME" x="85.598" y="40.8686" size="1.778" layer="95" rot="MR0"/>
-<attribute name="VALUE" x="85.09" y="37.338" size="1.778" layer="96"/>
+<attribute name="VALUE" x="91.948" y="40.894" size="1.778" layer="96"/>
 </instance>
 <instance part="R6" gate="G$1" x="88.9" y="38.1" smashed="yes">
 <attribute name="NAME" x="82.296" y="38.3286" size="1.778" layer="95"/>
-<attribute name="VALUE" x="85.09" y="34.798" size="1.778" layer="96"/>
+<attribute name="VALUE" x="91.948" y="38.354" size="1.778" layer="96"/>
 </instance>
 <instance part="R7" gate="G$1" x="88.9" y="35.56" smashed="yes">
 <attribute name="NAME" x="82.296" y="35.7886" size="1.778" layer="95"/>
-<attribute name="VALUE" x="85.09" y="32.258" size="1.778" layer="96"/>
+<attribute name="VALUE" x="91.694" y="35.56" size="1.778" layer="96"/>
 </instance>
 <instance part="R8" gate="G$1" x="38.1" y="68.58"/>
 <instance part="GND4" gate="1" x="96.52" y="20.32"/>
@@ -15336,7 +15345,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <nets>
 <net name="N$3" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="IN"/>
+<pinref part="Q1" gate="G$1" pin="IN"/>
 <pinref part="IC1" gate="G$1" pin="XTAL2"/>
 <wire x1="17.78" y1="55.88" x2="17.78" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="17.78" y1="60.96" x2="45.72" y2="60.96" width="0.1524" layer="91"/>
@@ -15345,7 +15354,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <net name="N$4" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="XTAL1"/>
-<pinref part="U$1" gate="G$1" pin="OUT"/>
+<pinref part="Q1" gate="G$1" pin="OUT"/>
 <wire x1="45.72" y1="55.88" x2="27.94" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -15353,25 +15362,24 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <segment>
 <pinref part="IC1" gate="G$1" pin="(AIN0)PB0"/>
 <pinref part="PRG" gate="G$1" pin="A"/>
-<wire x1="81.28" y1="50.8" x2="96.52" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="50.8" x2="83.82" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GND" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="GND"/>
+<pinref part="Q1" gate="G$1" pin="GND"/>
 <pinref part="GND2" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="PWR" gate="G$1" pin="C"/>
 <pinref part="GND1" gate="1" pin="GND"/>
 <wire x1="104.14" y1="43.18" x2="106.68" y2="43.18" width="0.1524" layer="91"/>
-<pinref part="PRG" gate="G$1" pin="C"/>
-<wire x1="104.14" y1="50.8" x2="106.68" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="106.68" y1="50.8" x2="106.68" y2="43.18" width="0.1524" layer="91"/>
 <junction x="106.68" y="43.18"/>
 <pinref part="USB1" gate="G$1" pin="GND"/>
 <wire x1="114.3" y1="40.64" x2="114.3" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="114.3" y1="43.18" x2="106.68" y2="43.18" width="0.1524" layer="91"/>
+<pinref part="R1" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="C1" gate="G$1" pin="-"/>
@@ -15566,6 +15574,13 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <pinref part="PWR" gate="G$1" pin="A"/>
 <pinref part="R2" gate="G$1" pin="2"/>
 <wire x1="93.98" y1="43.18" x2="96.52" y2="43.18" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$15" class="0">
+<segment>
+<pinref part="PRG" gate="G$1" pin="C"/>
+<pinref part="R1" gate="G$1" pin="1"/>
+<wire x1="96.52" y1="50.8" x2="91.44" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
